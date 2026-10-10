@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCrumbs Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>SweetCrumbs Bakery</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Freshly Baked, Made with Love</h2>
+      <p>Welcome to SweetCrumbs Bakery, where we bake bread, cakes, and pastries fresh every morning.</p>
+      <button id="explore-btn">Explore Our Bakery</button>
+      <a class="view-menu" href="#menu">View Menu</a>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>SweetCrumbs Bakery is a small family-run bakery. We use simple, quality ingredients and traditional recipes to make treats you will love.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Our Freshly Baked Favourites</h2>
+      <div class="menu-grid">
+        <article class="card">
+          <div class="card-icon">🎂</div>
+          <h3>Chocolate Cake</h3>
+          <p class="price">₹450</p>
+          <p>Rich, moist chocolate sponge layered with smooth chocolate ganache.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🥐</div>
+          <h3>Butter Croissant</h3>
+          <p class="price">₹90</p>
+          <p>Flaky, golden layers baked fresh every morning with real butter.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🧁</div>
+          <h3>Blueberry Muffin</h3>
+          <p class="price">₹120</p>
+          <p>Soft and fluffy muffin bursting with juicy blueberries.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🍪</div>
+          <h3>Chocolate Chip Cookies</h3>
+          <p class="price">₹150</p>
+          <p>Crisp edges, chewy centres and plenty of chocolate chips.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🍓</div>
+          <h3>Strawberry Cupcake</h3>
+          <p class="price">₹100</p>
+          <p>Vanilla cupcake topped with creamy strawberry frosting.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🍞</div>
+          <h3>Sourdough Bread</h3>
+          <p class="price">₹180</p>
+          <p>Crusty, tangy loaf made with a slow-fermented sourdough starter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order Your Favourites</h2>
+      <form id="order-form" novalidate>
+        <div class="form-group">
+          <label for="customer-name">Your Name</label>
+          <input type="text" id="customer-name" placeholder="Enter your name">
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="product">Product</label>
+          <select id="product">
+            <option value="Chocolate Cake" data-price="450">Chocolate Cake - ₹450</option>
+            <option value="Butter Croissant" data-price="90">Butter Croissant - ₹90</option>
+            <option value="Blueberry Muffin" data-price="120">Blueberry Muffin - ₹120</option>
+            <option value="Chocolate Chip Cookies" data-price="150">Chocolate Chip Cookies - ₹150</option>
+            <option value="Strawberry Cupcake" data-price="100">Strawberry Cupcake - ₹100</option>
+            <option value="Sourdough Bread" data-price="180">Sourdough Bread - ₹180</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" value="1">
+          <p class="error" id="quantity-error"></p>
+        </div>
+
+        <p class="total">Total: <span id="total-price">₹450</span></p>
+
+        <button type="submit">Place Order</button>
+      </form>
+
+      <div id="order-confirmation" class="confirmation" hidden>
+        <h3 id="confirm-message"></h3>
+        <ul>
+          <li><strong>Name:</strong> <span id="summary-name"></span></li>
+          <li><strong>Product:</strong> <span id="summary-product"></span></li>
+          <li><strong>Quantity:</strong> <span id="summary-quantity"></span></li>
+          <li><strong>Total:</strong> <span id="summary-total"></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <h3>SweetCrumbs Bakery</h3>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:hello@sweetcrumbs.example">hello@sweetcrumbs.example</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><strong>Address:</strong> 12, Bakery Street, Chennai, Tamil Nadu</li>
+            <li><strong>Opening Hours:</strong> Monday to Saturday, 9:00 AM to 8:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" placeholder="Your name">
+              <p class="error" id="contact-name-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" placeholder="you@example.com">
+              <p class="error" id="contact-email-error"></p>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="4" placeholder="How can we help?"></textarea>
+              <p class="error" id="contact-message-error"></p>
+            </div>
+            <button type="submit">Send Message</button>
+            <p class="demo-note">This is a demo form. Your message is not sent to a real inbox.</p>
+          </form>
+          <div id="contact-confirmation" class="confirmation" hidden>
+            <h3 id="contact-confirm-message"></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SweetCrumbs Bakery. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
