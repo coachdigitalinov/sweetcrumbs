@@ -306,6 +306,7 @@ input.invalid {
 .confirmation {
   margin-top: 24px;
   background-color: var(--beige);
+  scroll-margin-top: 80px;
 }
 
 .confirmation[hidden] {
